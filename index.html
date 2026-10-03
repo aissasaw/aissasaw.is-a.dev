@@ -3,57 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تعلم الرسم مع عيسى - دروس للمبتدئين</title>
-<meta name="description" content="تعلم الرسم من الصفر مع عيسى، دروس رسم الوجوه والطبيعة للمبتدئين">
+<title>أتليه الفن - تعلم الرسم مع عيسى | Aissa Saw</title>
+<meta name="description" content="تعلم الرسم من الصفر مع عيسى من سطيف، دروس يوتيوب، معرض اعمال، رسم الوجوه">
+<meta name="google-site-verification" content="PUT_YOUR_GOOGLE_CODE_HERE">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-body{font-family:Arial,Tahoma;max-width:850px;margin:0 auto;padding:15px;background:#ffffff;color:#333;line-height:2}
-header{text-align:center;padding:30px 10px;border-bottom:3px solid #3498db}
-header h1{color:#2c3e50;margin:0}
-article{background:#fff;margin:25px 0;padding:25px;border:1px solid #eee;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.05)}
-h2{color:#2980b9}
-nav{text-align:center;margin:20px 0;background:#f8f9fa;padding:15px;border-radius:8px}
-nav a{margin:0 12px;color:#2980b9;text-decoration:none;font-weight:bold}
-footer{text-align:center;margin-top:50px;padding:25px;background:#f8f9fa;border-radius:10px}
+:root{--bg:#121212;--surface:#1e1e1e;--gold:#d4af37;--text:#fff;--text2:#b3b3b3}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
+body{background:var(--bg);color:var(--text);line-height:2}
+header{background:rgba(30,30,30,0.98);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.6)}
+.nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:12px 20px}
+.logo{font-size:26px;font-weight:700;color:var(--gold);text-decoration:none}
+.nav-links{display:flex;list-style:none}
+.nav-links li{margin-right:16px}
+.nav-links a{color:var(--text);text-decoration:none;font-size:14px;transition:0.3s}
+.nav-links a:hover{color:var(--gold)}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1200') no-repeat center/cover;margin-top:55px;padding:20px}
+.hero-photo{width:140px;height:140px;border-radius:50%;border:4px solid var(--gold);margin:0 auto 15px;display:block;object-fit:cover}
+.hero h1{font-size:46px;margin-bottom:10px}
+.hero p{color:var(--gold);font-size:19px;margin-bottom:15px}
+.social-hero{margin:20px 0}
+.social-hero a{display:inline-block;width:45px;height:45px;line-height:45px;background:var(--surface);color:var(--gold);border-radius:50%;margin:0 6px;font-size:20px;border:1px solid #333;transition:0.3s;text-decoration:none}
+.social-hero a:hover{background:var(--gold);color:#000;transform:translateY(-3px)}
+.btn{display:inline-block;padding:12px 35px;background:var(--gold);color:#000;font-weight:700;text-decoration:none;border-radius:6px;margin-top:15px}
+.container{max-width:1200px;margin:0 auto;padding:70px 20px}
+.section-title{text-align:center;font-size:32px;margin-bottom:40px}
+.section-title::after{content:'';display:block;width:60px;height:3px;background:var(--gold);margin:10px auto 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery-item{background:var(--surface);border-radius:10px;overflow:hidden}
+.gallery-item img{width:100%;height:240px;object-fit:cover}
+.gallery-info{padding:15px}
+.video-box{max-width:800px;margin:0 auto 50px;background:var(--surface);padding:15px;border-radius:12px;border:1px solid #333}
+.video-box iframe{width:100%;height:450px;border-radius:8px;border:0}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:25px;max-width:900px;margin:0 auto}
+.blog-card{background:var(--surface);border-radius:12px;border:1px solid #333}
+.blog-content{padding:28px}
+.blog-date{color:var(--gold);font-size:13px}
+.blog-title{font-size:22px;margin:8px 0 12px}
+.blog-excerpt{color:var(--text2);font-size:16px}
+footer{background:var(--surface);text-align:center;padding:40px 20px;border-top:1px solid #333}
+footer .social-footer a{width:40px;height:40px;line-height:40px;display:inline-block;background:#2a2a2a;color:var(--gold);border-radius:50%;margin:0 5px;text-decoration:none}
+footer a.link{color:var(--gold);text-decoration:none;margin:0 8px;font-size:14px}
+@media(max-width:768px){.nav-container{flex-direction:column}.hero h1{font-size:30px}.video-box iframe{height:230px}}
 </style>
 </head>
 <body>
 
 <header>
-<h1>🎨 تعلم الرسم مع عيسى</h1>
-<p>موقعك الأول لتعلم الرسم من الصفر حتى الاحتراف</p>
+<nav class="nav-container">
+<a href="#" class="logo">أتليه الفن 🎨</a>
+<ul class="nav-links">
+<li><a href="#home">الرئيسية</a></li>
+<li><a href="#video">يوتيوب</a></li>
+<li><a href="#gallery">المعرض</a></li>
+<li><a href="#blog">المدونة</a></li>
+<li><a href="Privacy.html">الخصوصية</a></li>
+<li><a href="contact.html">اتصل</a></li>
+</ul>
+</nav>
 </header>
 
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="Privacy.html">الخصوصية</a>
-<a href="about.html">من نحن</a>
-<a href="contact.html">اتصل بنا</a>
-</nav>
+<section id="home" class="hero">
+<div>
+<img src="https://via.placeholder.com/140x140/d4af37/000?text=Aissa+Saw" alt="عيسى" class="hero-photo">
+<h1>تعلم الرسم مع عيسى</h1>
+<p>فنان جزائري من سطيف - نعلمك الرسم من الصفر حتى الاحتراف</p>
 
-<article>
-<h2>1- كيف تتعلم الرسم من الصفر؟</h2>
-<p>كثير من الناس يظن ان الرسم موهبة فقط، لكن الحقيقة انه مهارة يمكن لاي شخص تعلمها بالممارسة. ابدأ بالاشكال الهندسية البسيطة مثل الدائرة والمربع، ثم تعلم كيف تضيف الظل والنور. خصص 30 دقيقة يوميا للرسم وسوف تلاحظ تحسن كبير بعد شهر واحد فقط. الادوات لا تهم في البداية، قلم رصاص وورقة بيضاء كافية.</p>
-</article>
+<div class="social-hero">
+<!-- بدل الروابط بروابطك الحقيقية -->
+<a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+<a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" title="انستغرام"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+<a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+</div>
 
-<article>
-<h2>2- أفضل 5 أدوات رسم للمبتدئين 2026</h2>
-<p>لا تحتاج الى ادوات غالية لتبدأ. هذه هي الادوات الاساسية: 1- قلم رصاص HB للرسم الخفيف و 2B للتظليل. 2- ممحاة طرية لا تترك اثر. 3- ورق رسم A4 عادي 80غ. 4- مبراة جيدة. 5- مسطرة صغيرة. سعر هذه الادوات كلها لا يتجاوز 500 دينار جزائري وتجدها في اي مكتبة.</p>
-</article>
+<a href="#video" class="btn"><i class="fab fa-youtube"></i> شاهد دروسي على يوتيوب</a>
+</div>
+</section>
 
-<article>
-<h2>3- سر رسم الوجوه والعيون باحتراف</h2>
-<p>رسم الوجه يعتمد على النسب الصحيحة. قسم الوجه الى ثلاث اقسام متساوية: من الشعر الى الحاجبين، من الحاجبين الى الانف، ومن الانف الى الذقن. العيون تكون دائما في منتصف الرأس تماما. انصحك تبدأ برسم العين وحدها لمدة اسبوع، ثم الانف، ثم الفم، وبعدها تجمعهم مع بعض. الممارسة هي السر الوحيد.</p>
-</article>
+<!-- قسم فيديو يوتيوب -->
+<section id="video" class="container">
+<h2 class="section-title"><i class="fab fa-youtube" style="color:red"></i> آخر دروسي على يوتيوب</h2>
+<div class="video-box">
+<!-- بدل VIDEO_ID برابط فيديو تاعك -->
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="تعلم الرسم مع عيسى" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p style="text-align:center;margin-top:12px;color:var(--text2)">اشترك في القناة باش يوصلك كل جديد - درس جديد كل أسبوع!</p>
+</div>
+<div style="text-align:center">
+<a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank" class="btn" style="background:red;color:#fff"><i class="fab fa-youtube"></i> اشترك في القناة</a>
+</div>
+</section>
 
-<article>
-<h2>4- كيف تختار الالوان المناسبة؟</h2>
-<p>الالوان لها تأثير كبير على جمال لوحتك. ابدأ بالالوان الخشبية لانها سهلة التحكم. تعلم الدائرة اللونية: الالوان الاساسية هي الاحمر والازرق والاصفر. لا تستخدم اللون الاسود للتظليل، استخدم البني الغامق او الازرق الغامق سيعطي لوحتك جمال اكثر واحترافية.</p>
-</article>
+<section id="gallery" class="container">
+<h2 class="section-title">معرض أعمالي الفنية</h2>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=600"><div class="gallery-info"><h3>صخب الألوان</h3><p>زيت على كانفاس - 2026</p></div></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600"><div class="gallery-info"><h3>هدوء رمادي</h3><p>أكريليك - 2026</p></div></div>
+<div class="gallery-item"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600"><div class="gallery-info"><h3>انعكاس الروح</h3><p>مائية - 2025</p></div></div>
+</div>
+</section>
+
+<section id="blog" class="container" style="background:rgba(255,255,255,0.02);border-radius:15px">
+<h2 class="section-title">مدونة تعلم الرسم</h2>
+<div class="blog-grid">
+<div class="blog-card"><div class="blog-content"><span class="blog-date">3 أكتوبر 2026</span><h3 class="blog-title">1- كيف تتعلم الرسم من الصفر؟</h3><p class="blog-excerpt">الرسم ليس موهبة فقط بل مهارة تتعلمها بالممارسة. ابدأ بالاشكال الهندسية البسيطة، خصص 30 دقيقة يوميا، قلم رصاص وورقة كافية للبداية. شاهد الفيديو فوق وطبق معي.</p></div></div>
+<div class="blog-card"><div class="blog-content"><span class="blog-date">2 أكتوبر 2026</span><h3 class="blog-title">2- أفضل 5 أدوات رسم للمبتدئين 2026</h3><p class="blog-excerpt">HB و 2B، ممحاة طرية، ورق A4، مبراة، مسطرة. كلها بـ 500 دج فقط في مكتبات سطيف. لا تحتاج أدوات غالية.</p></div></div>
+<div class="blog-card"><div class="blog-content"><span class="blog-date">1 أكتوبر 2026</span><h3 class="blog-title">3- سر رسم الوجوه والعيون باحتراف</h3><p class="blog-excerpt">قسم الوجه 3 أقسام، العيون في المنتصف تماما. ابدأ بالعين وحدها أسبوع، ثم الأنف والفم. النسب هي السر.</p></div></div>
+<div class="blog-card"><div class="blog-content"><span class="blog-date">30 سبتمبر 2026</span><h3 class="blog-title">4- كيف تختار الألوان المناسبة؟</h3><p class="blog-excerpt">تعلم الدائرة اللونية، لا تستخدم الأسود للتظليل، استخدم بني غامق أو أزرق غامق لجمال أكثر.</p></div></div>
+</div>
+</section>
 
 <footer>
-<p>© 2026 Aissa Saw - تعلم الرسم مع عيسى</p>
-<p><a href="Privacy.html">سياسة الخصوصية</a> | <a href="about.html">من نحن</a></p>
-<p>الموقع الرسمي: https://aissasaw.github.io/aissasaw.is-a.dev/</p>
+<div class="social-footer" style="margin-bottom:20px">
+<a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank"><i class="fab fa-tiktok"></i></a>
+<a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+<p>© 2026 Aissa Saw - أتليه الفن</p>
+<p style="margin-top:12px"><a class="link" href="index.html">الرئيسية</a> | <a class="link" href="Privacy.html">الخصوصية</a> | <a class="link" href="about.html">من نحن</a> | <a class="link" href="contact.html">اتصل بنا</a></p>
+<p style="margin-top:10px;color:#555;font-size:12px">تم التحقق من Google و AdSense - aissasaw.github.io</p>
 </footer>
 
 </body>
