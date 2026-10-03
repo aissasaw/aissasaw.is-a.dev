@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الرسمي للفنان عيسى صاو | Aissa Saw</title>
-    <!-- استدعاء خط تاجويل ومكتبة الرموز والأيقونات الفنية -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>معرض الفنان الاحترافي | مدونة وإبداع</title>
     <style>
+        /* إعدادات الخطوط والألوان العامة */
         @import url('https://googleapis.com');
 
         :root {
-            --bg-color: #0b0b0b;
-            --surface-color: #161616;
-            --accent-color: #ff5500; /* لون موسيقي احترافي متناسق مع Audiomack */
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --accent-color: #d4af37; /* اللون الذهبي الاحترافي */
             --text-color: #ffffff;
-            --text-secondary: #aaaaaa;
+            --text-secondary: #b3b3b3;
         }
 
         * {
@@ -22,7 +21,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Tajawal', sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -31,15 +29,14 @@
             line-height: 1.6;
         }
 
-        /* الهيدر وقائمة التنقل */
+        /* الهيدر وشريط التنقل */
         header {
-            background-color: rgba(22, 22, 22, 0.95);
+            background-color: rgba(30, 30, 30, 0.95);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.7);
-            border-bottom: 1px solid #222;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
         .nav-container {
@@ -48,18 +45,15 @@
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 20px;
         }
 
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #fff;
+            color: var(--accent-color);
             text-decoration: none;
             letter-spacing: 1px;
-        }
-        .logo span {
-            color: var(--accent-color);
         }
 
         .nav-links {
@@ -68,11 +62,11 @@
         }
 
         .nav-links li {
-            margin-right: 25px;
+            margin-right: 20px;
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -82,50 +76,46 @@
             color: var(--accent-color);
         }
 
-        /* القسم الرئيسي - Hero */
+        /* القسم الرئيسي (البطل) */
         .hero {
-            height: 90vh;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://unsplash.com') no-repeat center center/cover;
-            padding-top: 80px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://unsplash.com') no-repeat center center/cover;
+            margin-top: 60px;
         }
 
         .hero-content h1 {
-            font-size: 56px;
-            margin-bottom: 15px;
-            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
         }
 
         .hero-content p {
-            font-size: 22px;
-            color: var(--text-secondary);
-            margin-bottom: 35px;
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-bottom: 30px;
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 35px;
+            display: inline-block;
+            padding: 12px 30px;
             background-color: var(--accent-color);
-            color: #fff;
+            color: #000;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 85, 0, 0.4);
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
-            background-color: #ff6a1a;
-            box-shadow: 0 6px 20px rgba(255, 85, 0, 0.6);
+            transform: scale(1.05);
+            background-color: #f5d061;
         }
 
-        /* حاويات الأقسام */
+        /* الحاوية العامة للأقسام */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -134,120 +124,61 @@
 
         .section-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 50px;
-        }
-
-        .section-title span {
-            color: var(--accent-color);
-        }
-
-        /* السيرة الذاتية المفصلة */
-        .about-section {
-            background-color: var(--surface-color);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #222;
-            margin-bottom: 30px;
-        }
-
-        .biography-text {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            text-align: justify;
-            border-bottom: 1px solid #333;
-            padding-bottom: 25px;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .info-item {
-            font-size: 17px;
-            background: #1e1e1e;
-            padding: 15px;
-            border-radius: 8px;
-            border-right: 4px solid var(--accent-color);
-        }
-
-        .info-item strong {
-            color: #fff;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* خط زمني للمحطات والخبرة المهنية */
-        .timeline {
-            margin-top: 50px;
-        }
-
-        .timeline-item {
             position: relative;
-            padding-right: 30px;
-            margin-bottom: 30px;
-            border-right: 2px solid var(--accent-color);
         }
 
-        .timeline-item::before {
+        .section-title::after {
             content: '';
-            position: absolute;
-            right: -7px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
+            display: block;
+            width: 60px;
+            height: 3px;
             background-color: var(--accent-color);
-            border-radius: 50%;
+            margin: 10px auto 0;
         }
 
-        .timeline-date {
-            color: var(--accent-color);
-            font-weight: bold;
+        /* قسم معرض الأعمال */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .gallery-info p {
+            color: var(--text-secondary);
             font-size: 14px;
         }
 
-        .timeline-title {
-            font-size: 20px;
-            margin: 5px 0;
-            color: #fff;
-        }
-
-        /* قسم الاستماع والأعمال الموسيقية */
-        .audio-section {
-            background-color: var(--surface-color);
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .audio-player-mock {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #222;
-            padding: 15px 25px;
-            border-radius: 50px;
-            max-width: 700px;
-            margin: 20px auto;
-            border: 1px solid #333;
-        }
-
-        .track-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .mp3-icon {
-            font-size: 28px;
-            color: var(--accent-color);
-        }
-
-        /* المدونة اليومية */
+        /* قسم المدونة اليومية */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -256,32 +187,26 @@
 
         .blog-card {
             background-color: var(--surface-color);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-            border: 1px solid #222;
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .blog-content {
-            padding: 30px;
+            padding: 25px;
         }
 
         .blog-date {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--accent-color);
-            font-weight: bold;
-            display: block;
             margin-bottom: 10px;
+            display: block;
         }
 
         .blog-title {
             font-size: 22px;
             margin-bottom: 15px;
+            color: #fff;
         }
 
         .blog-excerpt {
@@ -290,52 +215,28 @@
             margin-bottom: 20px;
         }
 
-        /* أزرار التواصل الاجتماعي */
-        .social-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 20px 0;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background-color: #222;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 20px;
+        .read-more {
+            color: var(--accent-color);
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: 1px solid #333;
+            font-weight: 500;
         }
 
-        /* ألوان السوشيال ميديا عند التمرير */
-        .social-links .facebook:hover { background-color: #1877f2; transform: translateY(-5px); }
-        .social-links .twitter:hover { background-color: #1da1f2; transform: translateY(-5px); }
-        .social-links .instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); transform: translateY(-5px); }
-        .social-links .tiktok:hover { background-color: #010101; border-color: #ff0050; transform: translateY(-5px); color: #00f2fe; }
-        .social-links .youtube:hover { background-color: #ff0000; transform: translateY(-5px); }
-        .social-links .whatsapp:hover { background-color: #25d366; transform: translateY(-5px); }
-        .social-links .paypal:hover { background-color: #003087; transform: translateY(-5px); }
-        .social-links .audiomack-icon:hover { background-color: #ff5500; transform: translateY(-5px); }
+        /* قسم من أنا / التواصل */
+        .about-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
 
+        /* الفوتر */
         footer {
             background-color: var(--surface-color);
             text-align: center;
             padding: 30px;
-            margin-top: 60px;
-            border-top: 1px solid #222;
+            margin-top: 50px;
+            border-top: 1px solid #333;
         }
 
         footer p {
@@ -343,10 +244,92 @@
             font-size: 14px;
         }
 
+        /* التجاوب مع الشاشات الصغيرة */
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 15px; }
-            .hero-content h1 { font-size: 34px; }
-            .audio-player-mock { flex-direction: column; gap: 15px; border-radius: 20px; text-align: center; }
+            .nav-container {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">أتليه الفن</a>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><a href="#blog">المدونة اليومية</a></li>
+                <li><a href="#about">عن الفنان</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>جسّد مشاعرك لوحاتٍ تنبض بالحياة</h1>
+            <p>مرحباً بكم في المساحة الإبداعية الخاصة بأعمالي التشكيلية واليوميات</p>
+            <a href="#gallery" class="btn">تصفح المعرض</a>
+        </div>
+    </section>
+
+    <!-- قسم معرض الأعمال -->
+    <section id="gallery" class="container">
+        <h2 class="section-title">أحدث الأعمال الفنية</h2>
+        <div class="gallery-grid">
+            <!-- عمل 1 -->
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="عمل فني">
+                <div class="gallery-info">
+                    <h3>صخب الألوان</h3>
+                    <p>ألوان زيتية على كانفاس - 2026</p>
+                </div>
+            </div>
+            <!-- عمل 2 -->
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="عمل فني">
+                <div class="gallery-info">
+                    <h3>هدوء رمادي</h3>
+                    <p>أكريليك وفحم - 2026</p>
+                </div>
+            </div>
+            <!-- عمل 3 -->
+            <div class="gallery-item">
+                <img src="https://unsplash.com" alt="عمل فني">
+                <div class="gallery-info">
+                    <h3>انعكاس الروح</h3>
+                    <p>ألوان مائية - 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المدونة اليومية -->
+    <section id="blog" class="container" style="background-color: rgba(255,255,255,0.02); border-radius: 15px;">
+        <h2 class="section-title">المدونة اليومية خلف الكواليس</h2>
+        <div class="blog-grid">
+            <!-- تدوينة 1 -->
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">3 أكتوبر 2026</span>
+                    <h3 class="blog-title">كيف تختار لوحة الألوان للوحتك القادمة؟</h3>
+                    <p class="blog-excerpt">اليوم شاركت معكم تجربتي في اختيار الألوان المتناسقة التي تعكس المشاعر الحزينة والهادئة في العمل الفني الجديد الذي أعمل عليه حالياً...</p>
+                    <a href="#" class="read-more">اقرأ المزيد ←</a>
+                </div>
+            </div>
+            <!-- تدوينة 2 -->
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-date">2 أكتوبر 2026</span>
+                    <h3 class="blog-title">علاقة القهوة الصباحية بضربات الفرشاة</h3>
+                    <p class="blog-excerpt">حديث من القلب حول الطقوس اليومية التي يمر بها أي فنان قبل أن يلمس بفرشاته سطح اللوحة البيضاء، وكيف نتغلب على قفلة الرسم...</p>
+                    
