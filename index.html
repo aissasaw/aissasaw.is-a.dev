@@ -1,58 +1,352 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AISSA SAW - مغني راب جزائري</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الرسمي للفنان عيسى صاو | Aissa Saw</title>
+    <!-- استدعاء خط تاجويل ومكتبة الرموز والأيقونات الفنية -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        @import url('https://googleapis.com');
 
-<!-- 1. كود أدسنس الصحيح - بدّل ca-pub-XXXX برقمك الحقيقي كي يقبلوك -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+        :root {
+            --bg-color: #0b0b0b;
+            --surface-color: #161616;
+            --accent-color: #ff5500; /* لون موسيقي احترافي متناسق مع Audiomack */
+            --text-color: #ffffff;
+            --text-secondary: #aaaaaa;
+        }
 
-<!-- 2. كود الأرشفة - بدّل الكود كي تعطيهولك جوجل -->
-<meta name="google-site-verification" content="ضع_كود_التحقق_الخاص_بك_هنا" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<style>
-body{background:#070707;color:#fff;font-family:Arial;text-align:center;margin:0}
-header{padding:25px;border-bottom:1px solid #222;background:#070707;position:sticky;top:0}
-.logo{font-size:32px;font-weight:900;letter-spacing:6px} .logo span{color:red}
-.sub{color:red;letter-spacing:3px;margin-top:5px;font-weight:700}
-nav{margin-top:15px} nav a{color:#777;margin:0 12px;text-decoration:none;font-weight:700}
-nav a:hover{color:#fff}
-.box{max-width:700px;margin:30px auto;padding:0 20px}
-.photo{width:280px;height:350px;margin:20px auto;border-radius:20px;overflow:hidden;border:2px solid #222;background:#111}
-.photo img{width:100%;height:100%;object-fit:cover}
-.contact{margin-top:50px;background:#111;border:1px solid #222;border-radius:20px;padding:30px}
-.email-big{font-size:22px;color:#fff;background:red;padding:12px 25px;border-radius:30px;display:inline-block;margin:15px 0;text-decoration:none;font-weight:900}
-footer{margin-top:50px;padding:20px;border-top:1px solid #222;color:#555;font-size:13px}
-</style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* الهيدر وقائمة التنقل */
+        header {
+            background-color: rgba(22, 22, 22, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.7);
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* القسم الرئيسي - Hero */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://unsplash.com') no-repeat center center/cover;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            color: var(--text-secondary);
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 35px;
+            background-color: var(--accent-color);
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 85, 0, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: #ff6a1a;
+            box-shadow: 0 6px 20px rgba(255, 85, 0, 0.6);
+        }
+
+        /* حاويات الأقسام */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: var(--accent-color);
+        }
+
+        /* السيرة الذاتية المفصلة */
+        .about-section {
+            background-color: var(--surface-color);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            margin-bottom: 30px;
+        }
+
+        .biography-text {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            text-align: justify;
+            border-bottom: 1px solid #333;
+            padding-bottom: 25px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            font-size: 17px;
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        .info-item strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* خط زمني للمحطات والخبرة المهنية */
+        .timeline {
+            margin-top: 50px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-right: 30px;
+            margin-bottom: 30px;
+            border-right: 2px solid var(--accent-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .timeline-title {
+            font-size: 20px;
+            margin: 5px 0;
+            color: #fff;
+        }
+
+        /* قسم الاستماع والأعمال الموسيقية */
+        .audio-section {
+            background-color: var(--surface-color);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .audio-player-mock {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #222;
+            padding: 15px 25px;
+            border-radius: 50px;
+            max-width: 700px;
+            margin: 20px auto;
+            border: 1px solid #333;
+        }
+
+        .track-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mp3-icon {
+            font-size: 28px;
+            color: var(--accent-color);
+        }
+
+        /* المدونة اليومية */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-content {
+            padding: 30px;
+        }
+
+        .blog-date {
+            font-size: 13px;
+            color: var(--accent-color);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* أزرار التواصل الاجتماعي */
+        .social-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 20px 0;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        /* ألوان السوشيال ميديا عند التمرير */
+        .social-links .facebook:hover { background-color: #1877f2; transform: translateY(-5px); }
+        .social-links .twitter:hover { background-color: #1da1f2; transform: translateY(-5px); }
+        .social-links .instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); transform: translateY(-5px); }
+        .social-links .tiktok:hover { background-color: #010101; border-color: #ff0050; transform: translateY(-5px); color: #00f2fe; }
+        .social-links .youtube:hover { background-color: #ff0000; transform: translateY(-5px); }
+        .social-links .whatsapp:hover { background-color: #25d366; transform: translateY(-5px); }
+        .social-links .paypal:hover { background-color: #003087; transform: translateY(-5px); }
+        .social-links .audiomack-icon:hover { background-color: #ff5500; transform: translateY(-5px); }
+
+        footer {
+            background-color: var(--surface-color);
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .hero-content h1 { font-size: 34px; }
+            .audio-player-mock { flex-direction: column; gap: 15px; border-radius: 20px; text-align: center; }
+        }
+    </style>
 </head>
-<body>
-<header>
-<div class="logo">AISSA <span>SAW</span></div>
-<div class="sub">مغني راب جزائري</div>
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="gallery.html">الصور</a>
-<a href="#contact">اتصل بنا</a>
-</nav>
-</header>
-<div class="box">
-<div class="photo"><img src="aissa-saw-rap.jpg" alt="Aissa Saw"></div>
-<h2>AISSA SAW</h2>
-<p style="color:red;letter-spacing:4px;font-weight:800">مغني راب جزائري</p>
-<p style="color:#999;line-height:1.8;margin-top:15px">الموقع الرسمي الوحيد للفنان عيسى سو - فنان راب من المسيلة</p>
-<div class="contact" id="contact">
-<h3>اتصل بنا - CONTACT OFFICIEL</h3>
-<p style="color:#888;margin:15px 0">للتواصل الرسمي: حفلات - تعاون - إعلانات</p>
-<a class="email-big" href="mailto:badoofares@gmail.com">badoofares@gmail.com</a>
-<p style="color:#888;margin-top:15px">📧 راسلني مباشرة على الإيميل</p>
-<p style="color:#666;font-size:13px;margin-top:10px">اضغط على الإيميل باش تبعثلي رسالة</p>
-</div>
-</div>
-<footer>
-<b style="color:#888">AISSA SAW © 2026</b><br>
-البريد الرسمي: badoofares@gmail.com<br><br>
-الموقع الرسمي الوحيد - Site Officiel
-</footer>
-</body>
-</html>
